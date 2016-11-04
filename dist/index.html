@@ -7,11 +7,11 @@
   <link href="styles/api-console-light-theme.css" rel="stylesheet" class="theme">
 </head>
 <body ng-app="ramlConsoleApp" ng-cloak class="raml-console-body">
-  <raml-initializer></raml-initializer>
   <script src="scripts/api-console-vendor.js"></script>
   <script src="scripts/api-console.js"></script>
   <script>
     $.noConflict();
   </script>
+  <raml-console-loader src="API/api.raml" disable-raml-client-generator></raml-console-loader>
 </body>
 </html>
