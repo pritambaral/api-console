@@ -1090,10 +1090,22 @@
       };
     })
     .controller('RamlConsoleLoaderController', function RamlConsoleLoaderController(
+      $attrs,
       $scope,
       $window,
       ramlParser
     ) {
+      $scope.options = {
+        allowUnsafeMarkdown:         $attrs.hasOwnProperty('allowUnsafeMarkdown'),
+        disableRamlClientGenerator:  $attrs.hasOwnProperty('disableRamlClientGenerator'),
+        disableThemeSwitcher:        $attrs.hasOwnProperty('disableThemeSwitcher'),
+        disableTitle:                $attrs.hasOwnProperty('disableTitle'),
+        disableTryIt:                $attrs.hasOwnProperty('disableTryIt'),
+        documentationCollapsed:      $attrs.hasOwnProperty('documentationCollapsed'),
+        resourcesCollapsed:          $attrs.hasOwnProperty('resourcesCollapsed'),
+        singleView:                  $attrs.hasOwnProperty('singleView')
+      };
+
       $scope.vm = {
         error:   void(0),
         loaded:  false,
